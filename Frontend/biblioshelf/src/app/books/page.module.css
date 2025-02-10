@@ -1,0 +1,507 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: var(--font-geist-sans);
+}
+
+/* Header */
+.header {
+  background-color: white;
+  padding: 10px 40px;
+  border-bottom: 1px solid var(--gray-alpha-100);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navLink {
+  font-size: 1rem;
+  color: var(--gray-alpha-100);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.navLink:hover {
+  color: #0070f3;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  padding: 40px;
+}
+
+/* sidebar
+.sidebar {
+  width: 25%;
+  min-width: 250px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.filterGroup {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filterGroup label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.filterGroup input,
+.filterGroup select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid var(--gray-alpha-200);
+  border-radius: 8px;
+} */
+.buttonContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+/* slider */
+/* .rangeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+
+.clearButton {
+  background-color: rgb(42, 41, 41);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.clearButton:hover {
+  background-color: rgb(233, 77, 77);
+} */
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+}
+
+/* Title before the search bar */
+.searchTitle {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 3px;
+}
+
+.searchTitle h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.searchTitle p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* search bar */
+
+.searchSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: var(--background);
+  width: 100%;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--gray-alpha-100);
+  padding: 12px;
+  border-radius: 50px;
+  width: 60%;
+  max-width: 600px;
+}
+.searchContainer input {
+  flex: 1;
+}
+.searchType {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: 50px;
+  background-color: var(--button-secondary-hover);
+  color: var(--foreground);
+  cursor: pointer;
+  outline: none;
+}
+
+.searchButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #005bb5;
+}
+
+/* Search Input */
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  outline: none;
+  color: black;;
+}
+
+.searchInput:focus {
+  border-color: #0070f3;
+}
+
+.searchInput::placeholder {
+  color: #888;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+  gap: 30px; 
+  justify-content: center;
+}
+/* cards */
+.card {
+  min-width: 160px; 
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 7px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 220px; 
+
+}
+
+.card p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--gray-alpha-200);
+  border-top: 1px solid var(--gray-alpha-100);
+}
+ 
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: rgb(186, 186, 186);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: rgb(93, 93, 93);
+  color: white;
+  transform: scale(1.05);
+}
+
+.pagination button:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.pagination button:disabled:hover {
+  transform: none;
+}
+
+.pagination button:first-child {
+  margin-right: auto;
+}
+
+.pagination button:last-child {
+  margin-left: auto;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; 
+}
+
+
+/* Modal Box */
+.modal {
+  position: relative;
+  background: #fff;
+  width: 90%;
+  max-width: 900px; 
+  max-height: 90vh; 
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+}
+.modal h2 {
+  margin-bottom: 20px;
+}
+.modalTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+.modalImage {
+  width: 200px; 
+  height: auto;
+  
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.modalContent h3 {
+  font-size: 1.3rem; 
+  font-weight: 600;
+}
+
+.modalContent p {
+  margin-bottom: 10px; 
+  font-weight: 500;
+}
+
+/* carousel */
+.carouselContainer {
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 2px solid #ddd;
+  max-height: 250px;  
+  overflow-y: auto;   
+  overflow-x: hidden; 
+  display: flex;
+  flex-direction: column; 
+}
+
+
+.suggestedTitle {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #888;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.carousel {
+  width: 100%;
+}
+
+.carouselItem p {
+  font-size: 0.75rem; 
+  font-weight: 400; 
+  text-align: center;
+  margin-top: 5px;
+  max-width: 90%;
+}
+
+
+.carouselImage {
+  width: 100px;
+  height: 150px;
+  display: block;
+  border: 1px solid #333;
+  margin: 10px;
+}
+.carouselImage:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+/* Close Icon */
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.closeIcon:hover {
+  color: darkred;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mainContent {
+    width: 100%;
+  }
+
+  .searchContainer {
+    width: 100%;
+  }
+
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchSection {
+    padding: 10px;
+  }
+
+  .searchContainer {
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+  }
+
+  .searchType {
+    width: 100%;
+  }
+  .searchInput {
+    width: 100%;
+  }
+
+  .searchButton {
+    width: 100%;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .pagination button {
+    width: 100%;
+    padding: 8px 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+    gap: 10px;
+  }
+
+  .card {
+    max-width: 130px; 
+    padding: 5px;
+  }
+
+  .card img {
+    height: 180px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.33% - 20px); 
+  }
+}

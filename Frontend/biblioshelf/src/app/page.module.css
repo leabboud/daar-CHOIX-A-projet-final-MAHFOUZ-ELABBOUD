@@ -1,0 +1,136 @@
+/* Page Layout */
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  display: grid;
+  grid-template-rows: 20px 1fr 20px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  min-height: 100svh;
+  padding: 40px;
+  gap: 64px;
+  font-family: var(--font-geist-sans);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+/* Centered main content */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  grid-row-start: 2;
+}
+
+/* Title */
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Typewriter Effect */
+.typewriter {
+  font-size: 1.5rem;
+  font-weight: 400;
+  min-height: 2rem;
+  color: var(--text-light-gray); 
+}
+
+/* Cursor Blinking */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 20px;
+  background-color: var(--background); 
+  margin-left: 5px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* CTA Button */
+.ctas {
+  display: flex;
+  gap: 16px;
+}
+
+/* Use Global Button Style */
+.ctas a {
+  text-decoration: none;
+}
+
+.footer {
+  grid-row-start: 3;
+  display: flex;
+  gap: 24px;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer img {
+  flex-shrink: 0;
+}
+
+/* Hover Effects */
+@media (hover: hover) and (pointer: fine) {
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .page {
+    padding: 32px;
+    padding-bottom: 80px;
+  }
+
+  .main {
+    align-items: center;
+  }
+
+  .main ol {
+    text-align: center;
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Dark mode logo fix */
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+}
